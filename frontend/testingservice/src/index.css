@@ -1,0 +1,621 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f0f2f5;
+    color: #222;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+.wrapper {
+    width: 1280px;
+    margin: 50px auto;
+}
+
+header .nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+header .nav .logo {
+    font-weight: 600;
+    font-size: 22px;
+    margin-right: auto;
+}
+
+/* Стили для всех ссылок и кнопок в навигации */
+header .nav a,
+header .nav button.nav-link {
+    font-weight: 400;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: opacity 500ms ease;
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+}
+
+/* Стили для hover состояния */
+header .nav a:hover,
+header .nav button.nav-link:hover {
+    opacity: 0.5;
+}
+
+header .logo {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.active {
+    color: #2600fa;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main .item {
+    width: 30%;
+    margin-bottom: 50px;
+    background: #f5f5f5;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+main .item img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    transition: transform 500ms ease;
+}
+
+main .item img:hover {
+    transform: scale(1.05);
+}
+
+main h2, main p, main b {
+    margin: 10px 20px;
+    color: #333;
+}
+
+main b {
+    color: #3b41b4;
+}
+
+footer {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.login-form {
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+    background: #fff;
+    padding: 150px;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.login-form h2 {
+    position: relative;
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+}
+
+.login-form h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 28px;
+    border-radius: 12px;
+    background: #4070f4;
+}
+
+.login-form form {
+    margin-top: 30px;
+}
+
+.login-form form .input-box {
+    height: 52px;
+    margin: 18px 0;
+}
+
+form .input-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+    border: 1.5px solid #C7BEBE;
+    border-bottom-width: 2.5px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus,
+.input-box input:valid {
+    border-color: #4070f4;
+}
+
+form .policy {
+    display: flex;
+    align-items: center;
+}
+
+form h3 {
+    color: #707070;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.input-box.button input {
+    color: #fff;
+    letter-spacing: 1px;
+    border: none;
+    background: #4070f4;
+    cursor: pointer;
+}
+
+.input-box.button input:hover {
+    background: #0e4bf1;
+}
+
+form .text h3 {
+    color: #333;
+    width: 100%;
+    text-align: center;
+}
+
+form .text h3 a {
+    color: #4070f4;
+    text-decoration: none;
+}
+
+form .text h3 a:hover {
+    text-decoration: underline;
+}
+
+
+/* Стили для элементов в панели админа */
+.books {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #d4d4d4;
+    max-width: 200px;
+    text-align: center;
+}
+
+.add-book-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.book img {
+    max-width: 100px;
+}
+
+.book-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.book button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.book button:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для фильтрации и сортировки тестов */
+.filter-sort-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filter-sort-container select,
+.filter-sort-container input {
+    padding: 10px;
+    font-size: 16px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Стили для списка тестов */
+.test-list {
+    list-style: none;
+    padding: 0;
+}
+
+.test-item {
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.test-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.test-item p {
+    margin: 5px 0;
+}
+
+.test-item button {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #4070f4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.test-item button:hover {
+    background-color: #0e4bf1;
+}
+
+/* Стили для формы регистрации */
+.register-form {
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+    background: #fff;
+    padding: 150px;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  }
+  
+  .register-form h2 {
+    position: relative;
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .register-form h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 28px;
+    border-radius: 12px;
+    background: #4070f4;
+  }
+  
+  .register-form form {
+    margin-top: 30px;
+  }
+  
+  .register-form form .input-box {
+    height: 52px;
+    margin: 18px 0;
+  }
+  
+  form .input-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+    border: 1.5px solid #C7BEBE;
+    border-bottom-width: 2.5px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  
+  .input-box input:focus,
+  .input-box input:valid {
+    border-color: #4070f4;
+  }
+  
+  .input-box.button input {
+    color: #fff;
+    letter-spacing: 1px;
+    border: none;
+    background: #4070f4;
+    cursor: pointer;
+  }
+  
+  .input-box.button input:hover {
+    background: #0e4bf1;
+  }
+  
+  .error {
+    color: red;
+    margin-top: 10px;
+  }
+
+  /* Стили для страницы прохождения теста */
+.test-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.test-container h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.test-container button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 18px;
+    color: #fff;
+    background-color: #4070f4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.test-container button:hover {
+    background-color: #0e4bf1;
+}
+
+.test-container button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.loading, .completed {
+    text-align: center;
+    font-size: 20px;
+    color: #333;
+}
+
+
+/* добавления нового теста с вопросами */
+.add-test-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .add-test-container h1 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .add-test-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .add-test-container input[type="text"],
+  .add-test-container input[type="number"],
+  .add-test-container textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .add-test-container input[type="text"]:focus,
+  .add-test-container input[type="number"]:focus,
+  .add-test-container textarea:focus {
+    border-color: #4070f4;
+  }
+  
+  .add-test-container button {
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #4070f4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-test-container button:hover {
+    background-color: #0e4bf1;
+  }
+  
+  .add-test-container .error {
+    color: red;
+    margin-top: 10px;
+  }
+
+  /* Админ панел */
+  .admin-panel-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-panel-container h1 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.admin-panel-container .admin-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.admin-panel-container .admin-panel button {
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #4070f4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.admin-panel-container .admin-panel button:hover {
+    background-color: #0e4bf1;
+}
+
+.tests {
+    margin-bottom: 50px;
+}
+
+.tests h2 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.test {
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.test h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.test p {
+    margin: 5px 0;
+}
+
+.test button {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #4070f4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.test button:hover {
+    background-color: #0e4bf1;
+}
+
+.users h2 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.user {
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.user p {
+    margin: 5px 0;
+}
+
+.user button {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #4070f4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user button:hover {
+    background-color: #0e4bf1;
+}
+.admin-panel-container .admin-btn {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.admin-panel-container .admin-btn button {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #4070f4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.admin-panel-container .admin-btn button:hover {
+    background-color: #0e4bf1;
+}
