@@ -24,6 +24,8 @@
 - Alembic
 - SQLAlchemy
 - PostgresSQL
+- Poetry
+- Docker
 
 ### Frontend
 - React
