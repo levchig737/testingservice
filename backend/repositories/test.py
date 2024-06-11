@@ -2,10 +2,10 @@ from typing import Iterable, Any
 
 from sqlalchemy.orm import joinedload
 
-from backend.db.base_repository import BaseRepository
-from backend.test.models import Test
-from backend.test.schemas import TestSchemaIn
-from backend.question.schemas import QuestionSchemaInScores
+from db.base_repository import BaseRepository
+from test.models import Test
+from test.schemas import TestSchemaIn
+from question.schemas import QuestionSchemaInScores
 from sqlalchemy import delete, select, func
 
 

@@ -1,15 +1,15 @@
 from fastapi import HTTPException
 
-from backend.answer.schemas import AnswerSchemaOut
-from backend.right_answer.schemas import RightAnswerSchemaOut
-from backend.test.schemas import TestSchemaIn, TestSchemaOut, TestSchemaWithoutQuestions, TestSchemaCount, \
+from answer.schemas import AnswerSchemaOut
+from right_answer.schemas import RightAnswerSchemaOut
+from test.schemas import TestSchemaIn, TestSchemaOut, TestSchemaWithoutQuestions, TestSchemaCount, \
     TestSchemaAverageResult
-from backend.question.schemas import QuestionSchemaOut
-from backend.repositories.test import TestRepository
-from backend.repositories.question import QuestionRepository
-from backend.repositories.answer import AnswerRepository
-from backend.repositories.right_answer import RightAnswerRepository
-from backend.repositories.completed_tests_users import CompletedTestsUsersRepository
+from question.schemas import QuestionSchemaOut
+from repositories.test import TestRepository
+from repositories.question import QuestionRepository
+from repositories.answer import AnswerRepository
+from repositories.right_answer import RightAnswerRepository
+from repositories.completed_tests_users import CompletedTestsUsersRepository
 
 from sqlalchemy.ext.asyncio import AsyncSession
 

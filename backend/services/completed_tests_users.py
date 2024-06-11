@@ -1,8 +1,8 @@
 from fastapi import HTTPException
 
-from backend.completed_tests_users.schemas import (CompletedTestsUsersSchemaIn, CompletedTestsUsersSchemaOut,
+from completed_tests_users.schemas import (CompletedTestsUsersSchemaIn, CompletedTestsUsersSchemaOut,
                                                    CompletedTestsUsersScoresSchemaOut)
-from backend.repositories.completed_tests_users import CompletedTestsUsersRepository
+from repositories.completed_tests_users import CompletedTestsUsersRepository
 
 from sqlalchemy.ext.asyncio import AsyncSession
 

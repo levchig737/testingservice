@@ -1,5 +1,5 @@
-from backend.auth.schemas.user import UserBlockByEmail, UserRead
-from backend.repositories.user import UserRepository
+from auth.schemas.user import UserBlockByEmail, UserRead
+from repositories.user import UserRepository
 
 from sqlalchemy.ext.asyncio import AsyncSession
 

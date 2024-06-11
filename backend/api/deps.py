@@ -1,12 +1,12 @@
-from backend.db.base import get_async_session
+from db.base import get_async_session
 from fastapi import Depends
 
-from backend.services.test import TestService
-from backend.services.question import QuestionService
-from backend.services.answer import AnswerService
-from backend.services.right_answer import RightAnswerService
-from backend.services.user import UserService
-from backend.services.completed_tests_users import CompletedTestsUsersService
+from services.test import TestService
+from services.question import QuestionService
+from services.answer import AnswerService
+from services.right_answer import RightAnswerService
+from services.user import UserService
+from services.completed_tests_users import CompletedTestsUsersService
 
 from sqlalchemy.ext.asyncio import AsyncSession
 

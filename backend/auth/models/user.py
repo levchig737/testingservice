@@ -1,4 +1,4 @@
-from backend.db.base import Base
+from db.base import Base
 from fastapi_users_db_sqlalchemy import SQLAlchemyBaseUserTable
 from sqlalchemy import  String
 from sqlalchemy.orm import Mapped, mapped_column

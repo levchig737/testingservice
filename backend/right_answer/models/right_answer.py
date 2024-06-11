@@ -1,6 +1,6 @@
-from backend.db.base import Base
-from sqlalchemy import ForeignKey, Integer, String, Boolean
-from sqlalchemy.orm import Mapped, mapped_column, relationship
+from db.base import Base
+from sqlalchemy import ForeignKey, Integer, Boolean
+from sqlalchemy.orm import Mapped, mapped_column
 
 
 class RightAnswer(Base):

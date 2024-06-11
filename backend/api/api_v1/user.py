@@ -1,14 +1,14 @@
 from typing import Annotated
 
-from backend.auth import User
-from backend.auth.user_manager import auth_backend
-from backend.auth.schemas.user import UserCreate, UserRead, UserUpdate, UserBlockByEmail
-from backend.auth.user_manager import current_active_user, fastapi_users
+from auth import User
+from auth.user_manager import auth_backend
+from auth.schemas.user import UserCreate, UserRead, UserUpdate, UserBlockByEmail
+from auth.user_manager import current_active_user, fastapi_users
 from fastapi import APIRouter, Depends
 
-from backend.services.user import UserService
+from services.user import UserService
 
-from backend.api.deps import get_user_service
+from api.deps import get_user_service
 
 router = APIRouter()
 

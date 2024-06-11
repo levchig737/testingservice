@@ -1,3 +1,3 @@
-from backend.test.models.test import Test
+from test.models.test import Test
 
 __all__ = ("Test",)

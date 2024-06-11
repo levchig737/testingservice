@@ -1,12 +1,12 @@
-from backend.answer.schemas import AnswerSchemaOut
-from backend.question.schemas import QuestionSchemaIn, QuestionSchemaWithoutAnswers, QuestionSchemaOut, QuestionSchemaInScores
-from backend.repositories.question import QuestionRepository
-from backend.repositories.test import TestRepository
+from answer.schemas import AnswerSchemaOut
+from question.schemas import QuestionSchemaIn, QuestionSchemaWithoutAnswers, QuestionSchemaOut, QuestionSchemaInScores
+from repositories.question import QuestionRepository
+from repositories.test import TestRepository
 
 
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.right_answer.schemas import RightAnswerSchemaOut
+from right_answer.schemas import RightAnswerSchemaOut
 
 
 class QuestionService:

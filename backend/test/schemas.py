@@ -1,8 +1,8 @@
-from typing import Optional, List
+from typing import List
 
 from pydantic import BaseModel
 
-from backend.question.schemas import QuestionSchema, QuestionSchemaOut
+from question.schemas import QuestionSchemaOut
 
 
 class TestSchema(BaseModel):

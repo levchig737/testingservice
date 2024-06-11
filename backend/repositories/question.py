@@ -2,9 +2,9 @@ from typing import Iterable
 
 from sqlalchemy.orm import joinedload
 
-from backend.db.base_repository import BaseRepository
-from backend.question.models.question import Question
-from backend.question.schemas import QuestionSchemaIn
+from db.base_repository import BaseRepository
+from question.models.question import Question
+from question.schemas import QuestionSchemaIn
 from sqlalchemy import delete, select
 
 

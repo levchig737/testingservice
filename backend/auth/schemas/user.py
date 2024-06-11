@@ -1,7 +1,7 @@
 from fastapi_users import schemas
 from pydantic import BaseModel
 
-from backend.auth.models.user import UserRole
+from auth.models.user import UserRole
 
 
 class UserRead(schemas.BaseUser[int]):

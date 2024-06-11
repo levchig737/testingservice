@@ -1,8 +1,8 @@
 from typing import Iterable
 
-from backend.db.base_repository import BaseRepository
-from backend.auth.models.user import User
-from backend.auth.schemas.user import UserBlockByEmail, UserRole
+from db.base_repository import BaseRepository
+from auth.models.user import User
+from auth.schemas.user import UserBlockByEmail, UserRole
 from sqlalchemy import select
 
 

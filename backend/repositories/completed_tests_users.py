@@ -1,8 +1,8 @@
 from typing import Iterable
 
-from backend.db.base_repository import BaseRepository
-from backend.completed_tests_users.models import CompletedTestsUsers
-from backend.completed_tests_users.schemas import CompletedTestsUsersSchemaIn
+from db.base_repository import BaseRepository
+from completed_tests_users.models import CompletedTestsUsers
+from completed_tests_users.schemas import CompletedTestsUsersSchemaIn
 from sqlalchemy import delete, select
 
 

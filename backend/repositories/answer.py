@@ -1,8 +1,8 @@
 from typing import Iterable
 
-from backend.db.base_repository import BaseRepository
-from backend.answer.models.answer import Answer
-from backend.answer.schemas import AnswerSchema, AnswerSchemaIn
+from db.base_repository import BaseRepository
+from answer.models.answer import Answer
+from answer.schemas import AnswerSchema, AnswerSchemaIn
 from sqlalchemy import delete, select
 
 

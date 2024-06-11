@@ -1,12 +1,12 @@
 from fastapi import APIRouter
 from starlette.responses import JSONResponse
 
-from backend.api.api_v1.test import router as test_router
-from backend.api.api_v1.question import router as question_router
-from backend.api.api_v1.answer import router as answer_router
-from backend.api.api_v1.right_answer import router as right_answer_router
-from backend.api.api_v1.user import router as user_router
-from backend.api.api_v1.completed_tests_users import router as completed_tests_users_router
+from api.api_v1.test import router as test_router
+from api.api_v1.question import router as question_router
+from api.api_v1.answer import router as answer_router
+from api.api_v1.right_answer import router as right_answer_router
+from api.api_v1.user import router as user_router
+from api.api_v1.completed_tests_users import router as completed_tests_users_router
 
 
 router = APIRouter()

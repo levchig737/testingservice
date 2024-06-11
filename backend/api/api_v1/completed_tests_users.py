@@ -2,15 +2,15 @@ from typing import Annotated, List
 
 from fastapi import APIRouter, Depends
 
-from backend.auth import User
-from backend.auth.user_manager import current_active_user
-from backend.completed_tests_users.schemas import (
+from auth import User
+from auth.user_manager import current_active_user
+from completed_tests_users.schemas import (
     CompletedTestsUsersSchemaIn, CompletedTestsUsersSchemaOut,
     CompletedTestsUsersScoresSchemaOut
 )
-from backend.services.completed_tests_users import CompletedTestsUsersService
+from services.completed_tests_users import CompletedTestsUsersService
 
-from backend.api.deps import get_completed_tests_users_service
+from api.deps import get_completed_tests_users_service
 
 
 router = APIRouter()

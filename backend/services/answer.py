@@ -1,8 +1,8 @@
 from fastapi import HTTPException
 
-from backend.answer.schemas import AnswerSchema, AnswerSchemaIn
-from backend.repositories.answer import AnswerRepository
-from backend.repositories.question import QuestionRepository
+from answer.schemas import AnswerSchemaIn
+from repositories.answer import AnswerRepository
+from repositories.question import QuestionRepository
 
 from sqlalchemy.ext.asyncio import AsyncSession
 

@@ -1,3 +1,3 @@
-from backend.question.models.question import Question
+from question.models.question import Question
 
 __all__ = ("Question",)

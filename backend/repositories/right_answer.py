@@ -1,8 +1,8 @@
 from typing import Iterable
 
-from backend.db.base_repository import BaseRepository
-from backend.right_answer.models.right_answer import RightAnswer
-from backend.right_answer.schemas import RightAnswerSchema, RightAnswerSchemaIn
+from db.base_repository import BaseRepository
+from right_answer.models.right_answer import RightAnswer
+from right_answer.schemas import RightAnswerSchema, RightAnswerSchemaIn
 from sqlalchemy import delete, select
 
 

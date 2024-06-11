@@ -1,2 +1,2 @@
-from backend.auth.user_manager import get_user_manager  # noqa
-from backend.auth.models import User  # noqa
+from auth.user_manager import get_user_manager  # noqa
+from auth.models import User  # noqa

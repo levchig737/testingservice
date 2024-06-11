@@ -2,13 +2,13 @@ from typing import Annotated
 
 from fastapi import APIRouter, Depends
 
-from backend.auth import User
-from backend.auth.user_manager import current_active_user
-from backend.test.schemas import TestSchemaIn, TestSchemaOut, TestSchemaWithoutQuestions, TestSchemaCount, \
+from auth import User
+from auth.user_manager import current_active_user
+from test.schemas import TestSchemaIn, TestSchemaOut, TestSchemaWithoutQuestions, TestSchemaCount, \
     TestSchemaAverageResult
-from backend.services.test import TestService
+from services.test import TestService
 
-from backend.api.deps import get_test_service
+from api.deps import get_test_service
 
 
 router = APIRouter()

@@ -2,15 +2,15 @@ from typing import AsyncGenerator, Optional
 
 from fastapi_users.authentication import AuthenticationBackend, JWTStrategy, CookieTransport
 
-from backend.config import SECRET, COOKIE_NAME
-from backend.db.base import get_async_session
+from config import SECRET, COOKIE_NAME
+from db.base import get_async_session
 from fastapi import Depends, Request
 from fastapi_users import BaseUserManager, FastAPIUsers, IntegerIDMixin
 from fastapi_users.db import BaseUserDatabase
 from fastapi_users_db_sqlalchemy import SQLAlchemyUserDatabase
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.auth.models.user import User
+from auth.models.user import User
 
 
 class UserManager(IntegerIDMixin, BaseUserManager[User, int]):  # type: ignore

@@ -2,8 +2,8 @@ from typing import Optional, List
 
 from pydantic import BaseModel, Field
 
-from backend.answer.schemas import AnswerSchema, AnswerSchemaOut
-from backend.right_answer.schemas import RightAnswerSchema, RightAnswerSchemaOut
+from answer.schemas import AnswerSchema, AnswerSchemaOut
+from right_answer.schemas import RightAnswerSchema, RightAnswerSchemaOut
 
 
 class QuestionSchema(BaseModel):

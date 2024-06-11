@@ -1,8 +1,6 @@
-from fastapi import HTTPException
-
-from backend.right_answer.schemas import RightAnswerSchemaIn
-from backend.repositories.right_answer import RightAnswerRepository
-from backend.repositories.question import QuestionRepository
+from right_answer.schemas import RightAnswerSchemaIn
+from repositories.right_answer import RightAnswerRepository
+from repositories.question import QuestionRepository
 
 from sqlalchemy.ext.asyncio import AsyncSession
 

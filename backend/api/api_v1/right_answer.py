@@ -1,10 +1,10 @@
 from typing import Annotated
 
 from fastapi import APIRouter, Depends
-from backend.right_answer.schemas import RightAnswerSchema, RightAnswerSchemaIn
-from backend.services.right_answer import RightAnswerService
+from right_answer.schemas import RightAnswerSchemaIn
+from services.right_answer import RightAnswerService
 
-from backend.api.deps import get_right_answer_service
+from api.deps import get_right_answer_service
 
 
 router = APIRouter()

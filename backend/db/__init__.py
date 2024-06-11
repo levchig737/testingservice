@@ -1,9 +1,9 @@
-from backend.test import models as test_models
-from backend.question import models as question_models
-from backend.answer import models as answer_models
-from backend.right_answer import models as right_answer_models
+from test import models as test_models
+from question import models as question_models
+from answer import models as answer_models
+from right_answer import models as right_answer_models
 
-from backend.db.base import Base
+from db.base import Base
 
 
 __all__ = (
