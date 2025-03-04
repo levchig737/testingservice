@@ -8,7 +8,7 @@ COPY poetry.lock* pyproject.toml ./
 
 RUN pip install --upgrade pip
 RUN pip install poetry
-RUN poetry export --without-hashes --format requirements.txt --output requirements.txt
-RUN bash -c "pip install -r requirements.txt"
+RUN poetry config virtualenvs.create false # чтобы ставилось в корень
+RUN poetry install --no-root
 
 COPY ./. /backend/.

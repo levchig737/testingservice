@@ -29,7 +29,7 @@ services:
       - "${APP_PORT}:${APP_PORT}"
     depends_on:
       - db
-    command: bash -c "while !</dev/tcp/db/5432; do sleep 1; done; sleep 2; alembic upgrade head && gunicorn main:app --worker-class uvicorn.workers.UvicornWorker --bind=0.0.0.0:${APP_PORT}"
+    command: bash -c "while !</dev/tcp/db/5432; do sleep 1; done; sleep 2; alembic upgrade head && uvicorn main:app --host ${APP_HOST} --port ${APP_PORT}"
     healthcheck:
       test: bash -c "</dev/tcp/app/${APP_PORT}"
       interval: 10s
@@ -37,41 +37,6 @@ services:
       retries: 5
     networks:
       testingservice-network:
-
-#  worker:
-#    build: .
-#    environment:
-#      - CELERY_BROKER_URL=redis://redis:6379/0
-#      - CELERY_RESULT_BACKEND=redis://redis:6379/0
-#    depends_on:
-#      - redis
-#      - app
-#    command: bash -c "while !</dev/tcp/app/${APP_PORT}; do sleep 1; done; celery -A task.task worker -E -B --loglevel=info --pool=solo"
-#    healthcheck:
-#      test: bash -c "</dev/tcp/app/${APP_PORT}"
-#      interval: 10s
-#      timeout: 5s
-#      retries: 5
-#    env_file:
-#      - .env
-#    networks:
-#      Analyzemate-network:
-
-#  dashboard:
-#    build: .
-#    command: celery --broker=redis://redis:6379/0 flower --port=5555
-#    ports:
-#      - 5556:5555
-#    environment:
-#      - CELERY_BROKER_URL=redis://redis:6379/0
-#      - CELERY_RESULT_BACKEND=redis://redis:6379/0
-#    depends_on:
-#      - redis
-#      - worker
-#    env_file:
-#      - .env
-#    networks:
-#      Analyzemate-network:
 
 volumes:
   testingservice-pg:
