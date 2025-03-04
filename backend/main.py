@@ -1,11 +1,7 @@
-from api.api import router as api_router
-
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
-import uvicorn
-
-from db.base import get_async_session, get_session_stub
+from api.api import router as api_router
 
 origins = [
     "*",
@@ -25,10 +21,6 @@ app.add_middleware(
 )
 
 # app.middleware("http")(exception_traceback_middleware)
-
-# --- Dependency Injection (DI) через `app.dependency_overrides` --- #
-
-app.dependency_overrides[get_session_stub] = get_async_session
 
 app.include_router(api_router)
 

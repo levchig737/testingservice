@@ -13,9 +13,6 @@ engine = create_async_engine(
 )
 async_session = async_sessionmaker(engine, expire_on_commit=False)
 
-def get_session_stub():
-    raise NotImplementedError
-
 async def get_async_session() -> AsyncGenerator[AsyncSession, None]:
     async with async_session() as session:
         yield session
